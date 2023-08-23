@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout>
+
+    <data>
+
+
+        <variable
+            name="pixaBayState"
+            type="com.example.assesmenttest.states.PixaBayState" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imagePlaceHolderId"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/montserrat_cairo_regular"
+                tools:text="Abdul wahab"
+                android:text="@{pixaBayState.userName}"
+                app:layout_constraintStart_toStartOf="@id/imagePlaceHolderId"
+                app:layout_constraintTop_toBottomOf="@id/imagePlaceHolderId" />
+
+
+
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tagsId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:text="@{pixaBayState.tags}"
+
+                android:drawableStart="@drawable/tags_bg"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/montserrat_cairo_regular"
+
+                tools:text="Kotlin"
+                android:textSize="14sp"
+
+                app:layout_constraintStart_toStartOf="@id/imagePlaceHolderId"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/repoStarId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/star_icon"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/montserrat_cairo_regular"
+                android:gravity="center_vertical"
+                android:layout_marginStart="50dp"
+                android:text="@{pixaBayState.likes}"
+
+                tools:text="5.53"
+                android:textSize="14sp"
+
+                app:layout_constraintStart_toEndOf="@id/userName"
+                app:layout_constraintTop_toTopOf="@+id/userName" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

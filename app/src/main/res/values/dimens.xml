@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_placeholder_size">60dp</dimen>
+    <dimen name="default_20_dp">20dp</dimen>
+    <dimen name="default_30_dp">30dp</dimen>
+    <dimen name="default_14sp">14sp</dimen>
+</resources>
